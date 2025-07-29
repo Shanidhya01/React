@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+typedef struct pokemon
+{
+    int hp;
+    int speed;
+    int attack;
+    char tier;
+    char name[15];
+} pokemon;
+void fun(pokemon p)
+{
+    printf("%d", p.hp);
+}
+void change(pokemon p){
+    p.hp = 70;
+    p.attack = 60;
+    p.speed = 120;
+}
+int main()
+{
+    pokemon pikachu;
+    pikachu.hp = 60;
+    pikachu.attack = 100;
+    pikachu.speed = 200;
+    change(pikachu);
+    printf("%d\n",pikachu.hp);
+    printf("%d\n",pikachu.attack);
+    printf("%d\n",pikachu.speed);
+    return 0;
+}

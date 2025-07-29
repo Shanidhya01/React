@@ -1,0 +1,48 @@
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int n1, n2, number, originalNumber, rem, count = 0;
+  double result = 0.0;
+  printf("Enter two numbers(intervals): ");
+  scanf("%d %d", &n1, &n2);
+  printf("Armstrong numbers between %d and %d are: ", n1, n2);
+
+  // swap numbers if n2 < n1
+  if (n2 < n1) {
+    n2 += n1;
+    n1 = n2 - n1;
+    n2 -= n1;
+  }
+   
+  // iterate number from (n1 + 1) to (n2 - 1)
+  // In each iteration, check if number is Armstrong
+  for (number = n1 + 1; number < n2; ++number) {
+    originalNumber = number;
+
+    // number of digits calculation
+    while (originalNumber != 0) {
+      originalNumber /= 10;
+      ++count;
+    }
+
+    originalNumber = number;
+
+    // result contains sum of nth power of individual digits
+    while (originalNumber != 0) {
+      rem = originalNumber % 10;
+      result += pow(rem, count);
+      originalNumber /= 10;
+    }
+
+    // check if number is equal to the sum of nth power of individual digits
+    if ((int)result == number) {
+      printf("%d \n", number);
+    }
+
+    // resetting the values
+    count = 0;
+    result = 0;
+  }
+
+  return 0;
+}

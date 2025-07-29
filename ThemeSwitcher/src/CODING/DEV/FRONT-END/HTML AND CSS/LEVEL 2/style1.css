@@ -1,0 +1,25 @@
+/* div{
+    background-color: red;
+    display: inline;
+} */
+/* button{
+    display: block;
+} */
+#box1{
+    background-color: rgba(0,0,255, 0.5);
+}
+#box2{
+    background-color: rgba(0,0,255, 0.75);
+    /* visibility: hidden;   /*box gayab ho jayega aur uske liye space  rahti hai */
+    /* display: none;  box gayab ho jayega aur uske liye space bhi nhi rahti hai */
+}
+#box3{
+    background-color: rgba(0,0,255, 1);
+}
+div{
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    padding: 25px;
+    display: inline-block;
+}
