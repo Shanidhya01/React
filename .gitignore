@@ -90,3 +90,20 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+
+# Vite
+dist/
+dist-ssr/
+*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Additional React/Frontend patterns
+public/hot-update*
+.env
+.env.production
